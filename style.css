@@ -1,0 +1,160 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+body{
+    background-color: #EDECEA;
+    min-height:100vh;
+}
+
+.container{
+    background-color: #585555;
+    min-height:100vh;
+    padding:23px;
+    margin:20px 230px;
+    border-radius: 35px;
+    box-shadow: 2px 0px 16px rgba(0, 0, 0, 0.075);
+}
+
+#input-box{
+    padding:35px;
+    background-color: rgb(122, 118, 118);
+    color: white;
+    border-radius: 25px;
+    margin:20px 20px;
+    
+}
+
+input, textarea{
+    padding:8px;
+    width:100%;
+    background-color: transparent;
+    border:none;
+    outline:none;
+    color:white;
+    margin-top:6px;
+}
+
+::placeholder {
+    color: rgb(190, 187, 187);
+    opacity: 1; /* Firefox */
+}
+
+.navbar ::placeholder {
+    color: black;
+}
+
+button{
+    background:transparent;
+    color:white;
+    padding: 8px 12px;
+    border: 1px solid white;
+    border-radius: 25px;
+
+}
+
+/* #notes{
+    padding:23px;
+    margin:5px;
+    border:1px solid black;
+    background-color: red;
+} */
+
+
+#notes{
+    padding: 23px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    
+}
+.note{
+    width: 360px;
+    color: wheat;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 12px;
+    padding: 12px;
+    border: 1px solid wheat;
+    background: transparent;
+    border-radius: 25px;
+}
+
+#access{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#access button{
+    margin:10px;
+
+}
+
+#items{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    margin:10px 0px;
+}
+
+.deletebutton{
+    float: right;
+    color: rgb(216, 98, 56);
+    border: 1px solid wheat;
+    border-radius: 25px;
+}
+
+.navbar{
+    margin:10px 230px;
+    background-color: #F7CC21;
+    border-radius: 25px;
+    height:65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     box-shadow: 2px 0px 16px rgba(0, 0, 0, 0.075);
+
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    width:350px;
+    padding:15px;
+    margin:0px 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color:black
+}
+
+#searchbar{
+    color:black;
+    border-radius: 7px;
+    border:1px solid skyblue;
+    width:120px;
+}
+
+form{
+    margin:0px 25px;
+}
+
+form button{
+    color:white;
+    background-color: rgb(216, 98, 56);
+    border-radius: 25px;
+}
+
+footer{
+    height: 150px;
+}
