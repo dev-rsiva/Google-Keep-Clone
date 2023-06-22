@@ -17,6 +17,7 @@ body{
 
 .container{
     background-color: #585555;
+    width:100%;
     min-height:100vh;
     max-width: 890px;
     padding:5px;
@@ -47,7 +48,7 @@ input, textarea{
     background-color: transparent;
     border:none;
     outline:none;
-    color:white;
+    color:black;
     margin-top:6px;
 }
 
