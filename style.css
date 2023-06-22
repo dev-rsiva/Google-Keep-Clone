@@ -9,26 +9,38 @@
 body{
     background-color: #EDECEA;
     min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .container{
     background-color: #585555;
     min-height:100vh;
-    padding:23px;
-    margin:20px 230px;
+    max-width: 890px;
+    padding:5px;
+    margin:20px 25px;
     border-radius: 35px;
     box-shadow: 2px 0px 16px rgba(0, 0, 0, 0.075);
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */  
 }
 
 #input-box{
-    padding:35px;
-    background-color: rgb(122, 118, 118);
+    padding:15px;
+    background-color: white;
     color: white;
     border-radius: 25px;
     margin:20px 20px;
     
 }
 
+#addNote{
+  color:white;
+  background-color: #d6612e;
+}
 input, textarea{
     padding:8px;
     width:100%;
@@ -40,12 +52,13 @@ input, textarea{
 }
 
 ::placeholder {
-    color: rgb(190, 187, 187);
+    font-size: 16px;
+    color: rgb(97, 97, 97);
     opacity: 1; /* Firefox */
 }
 
 .navbar ::placeholder {
-    color: black;
+    color: #6f6d6d;
 }
 
 button{
@@ -57,6 +70,15 @@ button{
 
 }
 
+#searchbutton{
+    background:#d6612e;
+    color:white;
+    padding: 8px 12px;
+    /* border: 1px solid black; */
+  border:none;
+    border-radius: 25px;
+
+}
 /* #notes{
     padding:23px;
     margin:5px;
@@ -69,9 +91,10 @@ button{
     padding: 23px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: space-around;
     
 }
+
 .note{
     width: 360px;
     color: wheat;
@@ -89,6 +112,7 @@ button{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 }
 
 #access button{
@@ -110,24 +134,32 @@ button{
     border: 1px solid wheat;
     border-radius: 25px;
 }
+.nav{
+    background-color: #EDECEA;
+    width:100%;
+    padding:0px 25px;
+}
 
 .navbar{
-    margin:10px 230px;
+    margin:10px 15px;
     background-color: #F7CC21;
     border-radius: 25px;
-    height:65px;
+    min-height:65px;
+    max-width: 890px;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
      box-shadow: 2px 0px 16px rgba(0, 0, 0, 0.075);
-
+     margin:15px auto;
 }
 
 .navbar ul{
     list-style: none;
     display: flex;
-    width:350px;
-    padding:15px;
+    max-width:350px;
+    padding:15px ;
     margin:0px 10px;
     justify-content: space-around;
     align-items: center;
@@ -135,18 +167,22 @@ button{
 
 .navbar ul li a{
     text-decoration: none;
-    color:black
+    color:rgb(216, 98, 56);
+    padding:0px 10px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 #searchbar{
-    color:black;
+    color:white;
     border-radius: 7px;
-    border:1px solid skyblue;
+    border:1px solid black;
     width:120px;
 }
 
 form{
     margin:0px 25px;
+    margin-bottom: 10px;
 }
 
 form button{
@@ -157,4 +193,48 @@ form button{
 
 footer{
     height: 150px;
+}
+
+@media only screen and (min-width:526px) and (max-width:600px){
+    .nav{
+    padding:0px 10px;
+    }
+  
+    .navbar{
+        justify-content: center;
+        padding:5px 0px;
+      
+    }
+    .container{
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+}
+
+
+@media only screen and (max-width:525px){
+    .container{
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .nav{
+    padding:0px 10px;
+    }
+  
+    .navbar{
+        justify-content: center;
+        padding:5px 0px;
+    }
+
+    #notes{
+        padding: 0px;        
+    }
+
+    .note{
+        width: 100%;
+    }
+  
+
 }

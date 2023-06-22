@@ -283,44 +283,44 @@ function showNotes(){
 
 
 
-      function filterNotes(event) {
-  // Get the search string from the input field.
-  let searchString = searchbar.value;
+//       function filterNotes(event) {
+//   // Get the search string from the input field.
+//   let searchString = searchbar.value;
 
-  // Create a new array to store the filtered notes.
-  let filteredNotes = [];
+//   // Create a new array to store the filtered notes.
+//   let filteredNotes = [];
 
-  // Iterate through the notes array.
-  for (let i = 0; i < notes.length; i++) {
-    // Check if the title or text of the note contains the search string.
-    if (notes[i].title.toLowerCase().includes(searchString.toLowerCase()) || notes[i].text.toLowerCase().includes(searchString.toLowerCase())) {
-      // If it does, add the note to the filtered notes array.
-      filteredNotes.push(notes[i]);
-    }
-  }
+//   // Iterate through the notes array.
+//   for (let i = 0; i < notes.length; i++) {
+//     // Check if the title or text of the note contains the search string.
+//     if (notes[i].title.toLowerCase().includes(searchString.toLowerCase()) || notes[i].text.toLowerCase().includes(searchString.toLowerCase())) {
+//       // If it does, add the note to the filtered notes array.
+//       filteredNotes.push(notes[i]);
+//     }
+//   }
 
-  // Clear the contents of the notes div.
-  notesDiv.innerHTML = "";
+//   // Clear the contents of the notes div.
+//   notesDiv.innerHTML = "";
 
-  // Iterate through the filtered notes array and add each note to the notes div.
-  for (let i = 0; i < filteredNotes.length; i++) {
-    notesDiv.innerHTML += `
-      <div class="note" id="note${i}">
-        <div id="items">
-          <div class="title" id="title${i}">${filteredNotes[i].title}</div>
-          <div class="text" id="text${i}">${filteredNotes[i].text}</div>
-        </div>
-        <div id="access">
-          <button class="archivebutton" id="archive${i}" onclick="archiveNotes(${i})">Archive</button>
-          <button class="deletebutton" id="${i}" onclick="deleteNotes(${i})">Delete</button>
-        </div>
-      </div>
-    `;
-  }
-}
+//   // Iterate through the filtered notes array and add each note to the notes div.
+//   for (let i = 0; i < filteredNotes.length; i++) {
+//     notesDiv.innerHTML += `
+//       <div class="note" id="note${i}">
+//         <div id="items">
+//           <div class="title" id="title${i}">${filteredNotes[i].title}</div>
+//           <div class="text" id="text${i}">${filteredNotes[i].text}</div>
+//         </div>
+//         <div id="access">
+//           <button class="archivebutton" id="archive${i}" onclick="archiveNotes(${i})">Archive</button>
+//           <button class="deletebutton" id="${i}" onclick="deleteNotes(${i})">Delete</button>
+//         </div>
+//       </div>
+//     `;
+//   }
+// }
 
-// Attach the event listener to the search button.
-searchbutton.addEventListener("click", filterNotes);
+// // Attach the event listener to the search button.
+// searchbutton.addEventListener("click", filterNotes);
 
 
 
